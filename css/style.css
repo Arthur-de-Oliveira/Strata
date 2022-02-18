@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root{
+    --fonte-padrao: 'Source Sans Pro', sans-serif;
+    --cor-padrao: #A2A2A2;
+    --cor-padrao-escuro: #787878;
+    --cor-destaque: #49bf9d;
+}
+
+body{
+    font-family: var(--fonte-padrao);
+    color: var(--cor-padrao);
+    line-height: 1.5;
+}
+
+a{
+    transition: .2s color linear, .2s border linear;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    color: var(--cor-destaque);
+}
+
+a:hover {
+    border-bottom-color: transparent;
+}
+
+p {
+    margin: 0 0 2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor-padrao-escuro);
+    font-weight: normal;
+    padding: 1em 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 18px;
+}
+h6 {
+    font-size: 15px;
+}
+sup, sub {
+    font-size: 12px;
+}
+
+blockquote {
+    border-left: 10px solid var(--cor-padrao);
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+}
+
+blockquote p {
+    margin-bottom: .5em;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+code {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 2px solid var(--cor-padrao);
+    font-size: .9em;
+    padding: .25em .65em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #929292;
+}
+
+pre code {
+    display: block;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.ul-alternativa {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.ul-alternativa li {
+    border-bottom: 2px solid var(--cor-padrao);
+}
+
+.ul-alternativa li:last-child {
+    border-bottom: transparent;
+}
+
+.ul-icones {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ul-icones li {
+    display: inline-block;
+    font-size: 1.5em;
+    color: var(--cor-destaque);
+    padding-right: 15px;
+}
+
+/* itens ocultos pórem acessiveis para leitores de tela */
+.oculto {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    display: block;
+}
+
+.main-footer .ul-icones li {
+    padding: 0 0 0 15px;
+}
+
+.main-footer .ul-icones li a {
+    color: #ffffff80;
+    border-color: transparent;
+}
+
+.main-footer .ul-icones li a:hover {
+    transition: .3s;
+    color: var(--cor-destaque);
+}
+
+.main-footer p a {
+    color: #ffffff80;
+}
+
+input, label, textarea {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+}
+
+input, textarea, select {
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus {
+    transition: .2s;
+    border: 3px solid var(--cor-destaque);
+    outline: none;
+}
+
+textarea {
+    height: 9em;
+}
+
+address {
+    margin-left: 30px;
+}
+
+.botao-padrao {
+    background-color: var(--cor-destaque);
+    border: 3px solid var(--cor-destaque);
+    color: #fff;
+    padding: .75em 1.5em;
+    border-radius: 5px;
+    font-size: .8em;
+    display: inline-block;
+    width: auto;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.botao-padrao:hover {
+    background-color: #4ccea9;
+    border-color: transparent;
+}
+
+.botao-padrao-vazado {
+    background-color: #fff;
+    color: var(--cor-padrao);
+    border-color: inherit;
+}
+
+.botao-padrao-vazado:hover {
+    color: var(--cor-destaque);
+    background-color: #fff;
+    border-color: var(--cor-destaque);
+}
+
+.botao-padrao-pequeno {
+    font-size: .7em;
+}
+
+.botao-padrao-grande {
+    font-size: 1em;
+}
+
+.botao-padrao-tela-cheia {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+}
+
+.tabela {
+    width: 98%;
+    margin: 0 5px 2em 5px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabela td {
+    padding: .75em;
+}
+
+.tabela th {
+    color: var(--cor-padrao-escuro);
+    font-weight: normal;
+    padding: .75em;
+}
+
+.tabela tbody tr td {
+    border-bottom: 1px solid #ccc;
+}
+
+.tabela tbody tr:first-child td {
+    border-top: 1px solid var(--cor-padrao);
+}
+
+.tabela tbody tr:last-child td {
+    border-bottom: 1px solid var(--cor-padrao);
+}
+
+.tabela tbody tr:nth-child(odd) td {
+    background-color: #e1e1e1;
+}
+
+.tabela-alternativa tbody td, .tabela-alternativa tbody tr:last-child td, .tabela-alternativa tbody tr:first-child td {
+    border: .3px solid var(--cor-padrao);
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 35%;
+    padding: 120px 60px;
+    text-align: right;
+    box-sizing: border-box;
+    background-image: url("../imagens/overlay.png"), url("../imagens/bg.jpg");
+    background-position: left center;
+    background-size: auto, cover;
+}
+
+.main-header-title {
+    font-size: 21px;
+    font-weight: normal;
+    color: #ffffff80;
+}
+
+.main-header-title strong{
+    color: #fff;
+    font-weight: normal;
+}
+
+.main-header-link {
+    color: inherit;
+}
+
+.main-header-link:hover {
+    color: var(--cor-destaque);
+}
+
+.link-imagem {
+    border-bottom-color: transparent ;
+}
+
+.main-header-avatar {
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.main-content {
+    width: 65%;
+    margin-left: 35%;
+    padding: 120px 140px 120px 60px;
+    box-sizing: border-box;
+}
+
+.trabalhos-recentes-card img {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imagem-esquerda {
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.imagem-direita {
+    border-radius: 5px;
+    overflow: hidden;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.galeria-imagem img {
+    width: 100%;
+}
+
+.galeria-thumb img, .galeria-imagem img {
+    margin-bottom: 2%;
+    display: inline-block;
+    border-radius: 5px;
+}    
+
+.trabalhos-recentes-card-title {
+    margin: 5px 0 7px 0;
+    font-size: 1.2em;
+}
+
+.trabalhos-recentes-card p:last-child {
+    color: #a2a2a2b4;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 35%;
+    text-align: right;
+}
+
+.main-footer-conteudo {
+    margin: 0 60px 120px 0px;
+}
+
+/* Grid */
+.linha {
+    overflow: auto;
+}
+
+.coluna-2 {
+    width: 48.5%;
+    float: left;
+}
+
+.coluna-2:first-child {
+    margin-right: 1.5%;
+}
+
+.coluna-2:last-child {
+    margin-left: 1.5%;
+}
+
+.coluna-2-3 {
+    width: 66%;
+    float: left;
+}
+
+.coluna-1-3 {
+    width: 32%;
+    float: left;
+}
+
+.coluna-1-3:nth-child(3n - 2) {
+    margin-right: 2%;
+}
+
+.coluna-1-3:nth-child(3n) {
+    margin-left: 2%;
+}
+
+.coluna-2-3 + .coluna-1-3, .coluna-1-3 + .coluna-2-3 {
+    margin-left: 2%;
+}
